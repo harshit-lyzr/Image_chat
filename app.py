@@ -96,7 +96,7 @@ with tempfile.NamedTemporaryFile(mode='w+', delete=False) as temp_file:
     temp_file_path = temp_file.name
 
 def generate_text(image_file):
-    client = OpenAI(api_key="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")
+    client = OpenAI()
 
     max_size = 512  # set to maximum dimension to allow (512=1 tile, 2048=max)
     encoded_string = encode_image(image_file, max_size)
